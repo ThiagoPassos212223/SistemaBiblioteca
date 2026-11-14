@@ -1,0 +1,21 @@
+PLANEJAMENTO DO SISTEMA DE BIBLIOTECA (PROVA JHOJON)
+
+1. OBJETIVO
+Sistema web em PHP orientado a objetos com arquitetura em camadas (Model, Repository, Service, Controller e Viewer) utilizando PDO e MySQL para gerenciamento de publicações, autores, classificações, tipos de publicação, divulgações e convidados.
+
+2. ENTIDADES E RELACIONAMENTOS
+- CLASSIFICACAO (idCLASSIFICACAO, nome, descricao)
+- AUTOR (idAUTOR, idCLASSIFICACAO, nome, descricao) -> N:1 com CLASSIFICACAO
+- TIPO_PUBLICACAO (idTIPO_PUBLICACAO, nome, descricao)
+- CONVIDADO (idCONVIDADO, nome, status_convite)
+- DIVULGACAO (idDIVULGACAO, idCONVIDADO, data, endereco) -> N:1 com CONVIDADO
+- PUBLICACAO (idPUBLICACAO, idTIPO_PUBLICACAO, idDIVULGACAO, idAUTOR, titulo, data_publicacao, descricao) -> N:1 com TIPO_PUBLICACAO, DIVULGACAO e AUTOR
+
+3. CAMADAS DO PROJETO
+- src/BancoDados.php: Conexão PDO com criação automática do banco e tabelas.
+- src/model/: Entidades de domínio com atributos privados, getters, setters e JsonSerializable.
+- src/repository/: Persistência com PDO e Prepared Statements herdando da classe abstrata Repository.
+- src/service/: Validações e regras de negócio.
+- src/controller/: Recebimento das requisições HTTP, resposta em JSON ou renderização das views.
+- src/viewer/: Interfaces HTML/PHP (listagem em index.php e cadastro/edição em form.php).
+- src/index.php: Front Controller responsável pelo roteamento e injeção de dependências.
