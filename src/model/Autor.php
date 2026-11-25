@@ -1,5 +1,6 @@
 <?php
 
+// exemplo de herança
 class Autor implements JsonSerializable {
     private ?int $id;
     private ?int $idClassificacao;

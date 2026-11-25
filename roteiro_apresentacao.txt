@@ -1,0 +1,6 @@
+O padrão utilizado no documento é o camelCase.
+
+O camelCase é utilizado em variáveis, e métodos
+
+
+

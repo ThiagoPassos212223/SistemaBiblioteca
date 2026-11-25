@@ -5,6 +5,7 @@ class Classificacao implements JsonSerializable {
     private string $nome;
     private string $descricao;
 
+    // lembrando, ponto de interrogação indica que pode receber o valor nullo
     public function __construct(?int $id, string $nome, string $descricao) {
         $this->id = $id;
         $this->nome = $nome;
