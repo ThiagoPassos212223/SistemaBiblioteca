@@ -1,5 +1,8 @@
 <?php
 
+// Este repositório gerencia os convidadoos cadastrados no banco.
+// Ele cria tabelas e realiza operações completas de persistência.
+// Os métodos utilizam PDO para inserir, atualizar e consultar.
 require_once __DIR__ . '/Repository.php';
 
 class ConvidadoRepository extends Repository {

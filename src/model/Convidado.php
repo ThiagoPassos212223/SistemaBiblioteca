@@ -1,5 +1,8 @@
 <?php
 
+// Esta classe representa um convvidado registrado no sistema.
+// Ela guarda identificador, nome e status do convite.
+// Os métodos permitem consultar e alterar essas informações.
 class Convidado implements JsonSerializable {
     private ?int $id;
     private string $nome;

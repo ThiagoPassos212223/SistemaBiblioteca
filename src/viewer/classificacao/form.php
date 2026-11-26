@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title><?= !empty($classificacao['idCLASSIFICACAO']) ? 'Editar' : 'Nova' ?> Classificação</title>
     <link rel="stylesheet" href="viewer/form.css">
+    <script src="viewer/form.js"></script>
 </head>
 <body>
     <nav style="background:#1e293b;padding:12px 20px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;">

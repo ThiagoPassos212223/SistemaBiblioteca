@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title><?= !empty($divulgacao['idDIVULGACAO']) ? 'Editar' : 'Nova' ?> Divulgação</title>
     <link rel="stylesheet" href="viewer/form.css">
+    <script src="viewer/form.js"></script>
 </head>
 <body>
     <nav style="background:#1e293b;padding:12px 20px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
@@ -36,8 +37,8 @@
             </div>
             <div class="form-group">
                 <label for="idCONVIDADO">Convidado</label>
-                <select id="idCONVIDADO" name="idCONVIDADO">
-                    <option value="">-- Selecione --</option>
+                <select id="idCONVIDADO" name="idCONVIDADO" required>
+                    <option value="" selected disabled>-- Selecione --</option>
                     <?php foreach ($convidados as $c): ?>
                         <option value="<?= (int)$c['idCONVIDADO'] ?>" <?= (isset($divulgacao['idCONVIDADO']) && (int)$divulgacao['idCONVIDADO'] === (int)$c['idCONVIDADO']) ? 'selected' : '' ?>>
                             <?= htmlspecialchars($c['nome']) ?>

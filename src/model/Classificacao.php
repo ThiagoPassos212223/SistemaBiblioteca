@@ -1,11 +1,14 @@
 <?php
 
+// Esta classe representa uma classificacão da biblioteca.
+// Ela guarda identificador, nome e descrição.
+// Os métodos permitem consultar e atualizar cada campo.
 class Classificacao implements JsonSerializable {
     private ?int $id;
     private string $nome;
     private string $descricao;
 
-    // lembrando, ponto de interrogação indica que pode receber o valor nullo
+    // lembrando, ponto de interrogação indica que pode receber o valor nulo
     public function __construct(?int $id, string $nome, string $descricao) {
         $this->id = $id;
         $this->nome = $nome;

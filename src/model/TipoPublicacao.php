@@ -1,5 +1,8 @@
 <?php
 
+// Esta classe representa um tipo de publicaçao registrado.
+// Ela guarda identificador, nome e descrição.
+// Os métodos permitem consultar e alterar esses valores.
 class TipoPublicacao implements JsonSerializable {
     private ?int $id;
     private string $nome;

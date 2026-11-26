@@ -1,5 +1,8 @@
 <?php
 
+// Este repositório gerencia tiposs de publicação no banco.
+// Ele cria tabelas e executa operações completas de CRUD.
+// Os métodos usam PDO e identificadores inteiros nos parâmetros.
 require_once __DIR__ . '/Repository.php';
 
 class TipoPublicacaoRepository extends Repository {

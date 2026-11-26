@@ -1,5 +1,8 @@
 <?php
 
+// Este repositório gerencia divulgaçoes armazenadas no banco.
+// Ele cria tabelas, consulta relações e realiza alterações.
+// Os métodos também permitem buscar ou remover cada registro.
 require_once __DIR__ . '/Repository.php';
 
 class DivulgacaoRepository extends Repository {

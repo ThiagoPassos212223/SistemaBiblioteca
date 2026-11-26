@@ -1,5 +1,8 @@
 <?php
 
+// Este repositório gerencia o autor no banco de dados.
+// Ele cria a tabela, busca registros e executa CRUD.
+// Os métodos usam PDO e tratam identficadores corretamente.
 require_once __DIR__ . '/Repository.php';
 
 class AutorRepository extends Repository {

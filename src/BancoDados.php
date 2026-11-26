@@ -1,5 +1,6 @@
 <?php
 
+// realiza a interface com o banco de dados. Cria a conexão e permite que as outras classes utilizem o banco sem necessitar realizar a configuração.
 class BancoDados {
     public string $host = "localhost";
     public string $username = "root";
@@ -39,6 +40,8 @@ class BancoDados {
                 $this->password,
                 [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
             );
+
+            // cria a base dados caso ela não existir.
             $pdoTemp->exec("CREATE DATABASE IF NOT EXISTS `{$this->dbname}` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
         } catch (PDOException $e) {
             throw new PDOException("Erro ao criar o banco de dados: " . $e->getMessage(), (int)$e->getCode());

@@ -1,5 +1,8 @@
 <?php
 
+// Este repositório gerencia a classificacão no banco de dados.
+// Ele cria tabelas, consulta registros e executa alterações.
+// Os métodos utilizam prepared statements para segurança.
 require_once __DIR__ . '/Repository.php';
 
 class ClassificacaoRepository extends Repository {

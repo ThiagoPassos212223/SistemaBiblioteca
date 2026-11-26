@@ -1,5 +1,8 @@
 <?php
 
+// Esta classe representa uma divulgaçao realizada pela biblioteca.
+// Ela guarda data, endereço e identificação do convidado.
+// Os métodos permitem consultar e modificar os dados.
 class Divulgacao implements JsonSerializable {
     private ?int $id;
     private ?int $idConvidado;

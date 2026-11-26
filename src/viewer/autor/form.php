@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="viewer/form.css">
-</style>
+    <script src="viewer/form.js"></script>    
 </head>
 <body>
     <nav style="background:#1e293b;padding:12px 20px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
@@ -29,9 +29,10 @@
             </div>
             <div class="form-group">
                 <label for="idCLASSIFICACAO">Classificação</label>
-                <select id="idCLASSIFICACAO" name="idCLASSIFICACAO">
-                    <option value="">-- Selecione --</option>
+                <select id="idCLASSIFICACAO" name="idCLASSIFICACAO" required>
+                    <option value="" selected disabled>-- Selecione --</option>
                     <?php foreach ($classificacoes as $c): ?>
+                        // casting do id classificação, para garantir que o valor seja considerado um inteiro
                         <option value="<?= (int)$c['idCLASSIFICACAO'] ?>" <?= (isset($autor['idCLASSIFICACAO']) && (int)$autor['idCLASSIFICACAO'] === (int)$c['idCLASSIFICACAO']) ? 'selected' : '' ?>>
                             <?= htmlspecialchars($c['nome']) ?>
                         </option>

@@ -1,5 +1,8 @@
 <?php
 
+// Este repositório gerencia pulicações armazenadas no banco.
+// Ele relaciona autores, tipos e divulgações cadastrados.
+// Os métodos realizam inserção, leitura, alteração e remoção.
 require_once __DIR__ . '/Repository.php';
 
 class PublicacaoRepository extends Repository {

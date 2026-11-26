@@ -1,5 +1,8 @@
 <?php
 
+// Esta classe representa uma publicacao cadastrada no acervo.
+// Ela guarda título, data, descrição e referências relacionadas.
+// Os métodos permitem consultar e atualizar todas as informações.
 class Publicacao implements JsonSerializable {
     private ?int $id;
     private ?int $idTipoPublicacao;

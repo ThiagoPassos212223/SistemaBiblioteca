@@ -1,6 +1,8 @@
 <?php
 
-// exemplo de herança
+// Esta classe representa um autorr da biblioteca.
+// Ela guarda identificadores, nome e descrição.
+// Os métodos permitem consultar e alterar seus dados.
 class Autor implements JsonSerializable {
     private ?int $id;
     private ?int $idClassificacao;

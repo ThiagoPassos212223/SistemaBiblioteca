@@ -1,5 +1,8 @@
 <?php
 
+// Esta classe abstrata define o contrato das enttidades no repsitorio principal.
+// Ela guarda a conexão PDO utilizada pelas entidades.
+// Cada repositório implementa os métodos definidos nesta base.
 abstract class Repository {
     protected PDO $conexao;
 
