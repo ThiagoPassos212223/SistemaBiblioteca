@@ -98,6 +98,7 @@ try {
         default => null
     };
 
+    // utilização do if para uma comparação
     if ($controller === null) {
         http_response_code(404);
         echo "Entidade não encontrada.";

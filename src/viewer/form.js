@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // procura por modificações em algum dado do formulário
+        // uso do forEach
         campos.forEach((campo) => {
             campo.addEventListener('input', () => { alterouAlgumDado = true; });
             campo.addEventListener('change', () => { alterouAlgumDado = true; });

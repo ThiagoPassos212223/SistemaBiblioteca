@@ -7,6 +7,7 @@ class ClassificacaoService {
     private ClassificacaoRepository $repository;
 
     public function __construct(ClassificacaoRepository $repository) {
+        // atribuição repository
         $this->repository = $repository;
     }
 
@@ -29,10 +30,13 @@ class ClassificacaoService {
     }
 
     public function buscarPorId(int $id): array {
+        // comparação usando o operador de comparação
         if ($id <= 0) {
             throw new InvalidArgumentException("O ID fornecido é inválido!");
         }
         $registro = $this->repository->buscarPorId($id);
+
+        // uso do operador lógico not(!)
         if (!$registro) {
             throw new RuntimeException("Classificação não encontrada!");
         }

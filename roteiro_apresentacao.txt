@@ -1,6 +1,35 @@
-O padrão utilizado no documento é o camelCase.
+Critérios de avaliação
 
-O camelCase é utilizado em variáveis, e métodos
+o sistema usa comentários com grande frequência
+
+O padrão utilizado para classes foi o padrão CamelCase, contudo, para variáveis e métodos foi utilizado o padrão snake_case
+
+Os operadores aritméticos são utilizados no arquivo calculado (+, -, *, /, %), além disso ocorre incremento e decremento
+funções com parâmetros também ocorre
+
+
+Há o uso de String para definir o campo de descrição --> models --> Autor.php
+
+Há o uso de atribuições ao longo do código. Há o uso de comparação, há uso de operadores lógicos --> models --> ClassificacaoService.php
+
+Há o uso de comparação --> index.php
+
+Um array aparece no arquivo --> controller --> HomeController.php
+
+Uso do forEach --> BancoDados.php
+
+Uso do while --> models --> calculadora
+
+Uso do if, operador ternário e switch --> index.php
+
+classes --> repository --> *
+Uso de herança --> repository --> Repository.php (classe mãe) --> todos os repositórios
+Instânciação ocorre --> index.php
+
+Banco de dados --> Banco dados --> leitura, atualização, deleção e inserção
+
+Mostrar: repository 
+
 
 
 

@@ -37,5 +37,18 @@
                 $resultado += $i;
             }
         }
+
+        public int fatorial(int $n1){
+            $resultado = 1;
+            $numero_atual = $n1;
+
+            // uso do looping while
+            while ($numero_atual > 1){
+                $resultado *= $numero_atual;
+                $numero_atual -= 1;
+            }
+
+            return $resultado;
+        }
     }
 ?>
